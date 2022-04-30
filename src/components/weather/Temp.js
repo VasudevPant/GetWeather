@@ -1,10 +1,10 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import WeatherCard from "./WeatherCard";
 import "./style.css";
 
 
 const Temp = () => {
-  const [searchValue, setSearchValue] = useState("delhi");
+  const [searchValue, setSearchValue] = useState("");
   const [tempInfo, setTempInfo] = useState({});
 
   const getWeatherInfo = async () => {
@@ -35,10 +35,6 @@ const Temp = () => {
       console.log(error);
     }
   };
-
-  useEffect(() => {
-    getWeatherInfo();
-  },[]);
 
   return (
     <>
